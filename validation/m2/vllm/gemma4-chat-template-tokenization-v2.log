@@ -1,0 +1,4 @@
+rendered = '<bos><|turn>user\nWhat is 17 + 25?<turn|>\n<|turn>model\n<|channel>thought\n<channel|>'
+token_count = 23
+token_ids = [2, 105, 2364, 107, 3689, 563, 236743, 236770, 236832, 900, 236743, 236778, 236810, 236881, 106, 107, 105, 4368, 107, 100, 45518, 107, 101]
+GEMMA4_CHAT_TOKENIZATION_V2=PASS

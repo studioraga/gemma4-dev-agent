@@ -1,0 +1,13 @@
+=== DATE ===
+2026-09-25T17:33:49+05:30
+
+=== RAM ===
+               total        used        free      shared  buff/cache   available
+Mem:            46Gi        12Gi       7.0Gi       1.0Gi        28Gi        34Gi
+Swap:          8.0Gi       928Ki       8.0Gi
+
+=== GPU ===
+NVIDIA GeForce RTX 5060 Ti, 16311 MiB, 541 MiB, 15300 MiB
+
+=== MODEL ===
+22G	/home/rmk/models/gemma4/gemma-4-31B-it-qat-w4a16-ct-52f3f65bc7a02d555763bc923bd1d9094898219d/model.safetensors

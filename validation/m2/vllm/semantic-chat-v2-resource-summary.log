@@ -1,0 +1,8 @@
+resource_samples=396
+malformed_samples=0
+first_timestamp=2026-09-25T18:33:08+05:30
+last_timestamp=2026-09-25T18:39:52+05:30
+peak_vram_used_mib=14935
+min_ram_available_bytes=16562032640
+min_ram_available_gib=15.425
+RESOURCE_SUMMARY=PASS

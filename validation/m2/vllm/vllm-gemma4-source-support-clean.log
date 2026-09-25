@@ -1,0 +1,100 @@
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/attention/attention.py:452:        # Gemma4: clamp mm_prefix bidirectional ranges by the sliding window
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/gemma4_rope.py:3:"""Gemma4-specific Rotary Positional Embeddings (proportional scaling).
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/gemma4_rope.py:5:Gemma4 uses "proportional" RoPE which computes inv_freq frequencies scaled
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/gemma4_rope.py:16:class Gemma4RotaryEmbedding(RotaryEmbedding):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/gemma4_rope.py:17:    """Gemma4 proportional RoPE.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/__init__.py:19:from .gemma4_rope import Gemma4RotaryEmbedding
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/__init__.py:154:        # Proportional RoPE is used by Gemma4 for global (full) attention.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/__init__.py:155:        # Gemma4 uses a sparse/fractional RoPE with cross-mixing between halves.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/layers/rotary_embedding/__init__.py:156:        rotary_emb = Gemma4RotaryEmbedding(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:3:"""Gemma4 DSpark draft model for speculative decoding."""
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:23:from vllm.transformers_utils.configs.gemma4 import gemma4_layer_config
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:25:from .gemma4_mtp import Gemma4MTPAttention, Gemma4MTPDecoderLayer
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:31:class Gemma4DSparkAttention(Gemma4MTPAttention):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:32:    """Gemma4 attention with its own KV cache and K/V projections."""
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:47:        layer_config = gemma4_layer_config(config, layer_idx)
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:114:class Gemma4DSparkDecoderLayer(Gemma4MTPDecoderLayer):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:115:    """Gemma4 MTP decoder layer using the KV-owning DSpark attention."""
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:130:        self.self_attn = Gemma4DSparkAttention(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:136:class Gemma4DSparkModel(DFlashQwen3Model):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:137:    """Gemma4 DSpark draft backbone (Gemma4 layers + DSpark Markov head)."""
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:172:            Gemma4DSparkDecoderLayer(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:198:            "Gemma4 DSpark fused precompute assumes uniform attention_k_eq_v layers"
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:268:class Gemma4DSparkForCausalLM(Qwen3DSparkForCausalLM):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:269:    """Gemma4 DSpark speculator over a self-contained draft checkpoint."""
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_dspark.py:279:        self.model = Gemma4DSparkModel(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:112:    "Gemma4ForCausalLM": ("gemma4", "Gemma4ForCausalLM"),
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:419:    "Gemma4ForConditionalGeneration": ("gemma4_mm", "Gemma4ForConditionalGeneration"),
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:420:    "Gemma4UnifiedForConditionalGeneration": (
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:421:        "gemma4_unified",
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:422:        "Gemma4UnifiedForConditionalGeneration",
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:658:    "Gemma4DSparkModel": ("gemma4_dspark", "Gemma4DSparkForCausalLM"),
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/registry.py:684:    "Gemma4MTPModel": ("gemma4_mtp", "Gemma4MTP"),
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:5:Single Gemma4 backbone run in two modes (like YOCO):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:12:Multimodal support: the model always includes a vision tower (shared with Gemma4).
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:14:via Gemma4MultimodalEmbedder.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:39:from vllm.model_executor.models.gemma4 import Gemma4Model
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:40:from vllm.model_executor.models.gemma4_mm import (
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:41:    Gemma4DummyInputsBuilder,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:42:    Gemma4ForConditionalGeneration,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:43:    Gemma4MultimodalEmbedder,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:44:    Gemma4MultiModalProcessor,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:45:    Gemma4ProcessingInfo,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:75:    Structurally identical to Gemma4MLP but with self_conditioning_size
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:102:# Multimodal processing info (overrides Gemma4 config type check)
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:106:class DiffusionGemmaProcessingInfo(Gemma4ProcessingInfo):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:110:    (which inherits from ``PretrainedConfig``, not ``Gemma4Config``).
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:115:        # DiffusionGemmaConfig doesn't inherit from Gemma4Config, so we
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:139:    Gemma4MultiModalProcessor,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:141:    dummy_inputs=Gemma4DummyInputsBuilder,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:150:    Single Gemma4 backbone that switches between encoder and decoder mode.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:151:    The encoder path uses standard Gemma4 layers (causal attention, KV write).
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:155:    Always includes a vision tower (same as Gemma4) for image understanding.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:192:        # the "k_eq_v" variant in our Gemma4 backbone. The checkpoint has no
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:199:        self.embed_vision: Gemma4MultimodalEmbedder | None
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:218:                self.embed_vision = Gemma4MultimodalEmbedder(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:233:        # ---- Language backbone (Gemma4Model) ----
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:237:        self.model = Gemma4Model(
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:283:    # Multimodal: reuse Gemma4's image parsing, processing & embedding
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:286:    # are architecturally identical to Gemma4.  Delegate to avoid
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:290:        Gemma4ForConditionalGeneration._parse_and_validate_image_input
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:293:        Gemma4ForConditionalGeneration._parse_and_validate_video_input
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:296:        Gemma4ForConditionalGeneration._parse_and_validate_multimodal_inputs
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:298:    _encoder_chunk = staticmethod(Gemma4ForConditionalGeneration._encoder_chunk)
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:299:    _process_image_input = Gemma4ForConditionalGeneration._process_image_input
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:300:    _process_video_input = Gemma4ForConditionalGeneration._process_video_input
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:301:    embed_multimodal = Gemma4ForConditionalGeneration.embed_multimodal
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:351:        We load encoder weights into our single ``Gemma4Model`` backbone,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:435:        # Delegate to Gemma4ForCausalLM.load_weights for the backbone,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:437:        # Temporarily set self.config to text_config since Gemma4's
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:439:        from vllm.model_executor.models.gemma4 import Gemma4ForCausalLM
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:444:            Gemma4ForCausalLM.load_weights(self, _remap_weights())
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/diffusion_gemma.py:765:    Single Gemma4 backbone in two modes:
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:6:text-only Gemma4ForCausalLM.  The vision/audio encoders are loaded via
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:10:Video support:  Gemma4 does **not** have a native video tower.  Videos are
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:26:from transformers.models.gemma4 import (
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:27:    Gemma4AudioFeatureExtractor,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:28:    Gemma4Config,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:29:    Gemma4Processor,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:30:    Gemma4VisionConfig,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:32:from transformers.models.gemma4.configuration_gemma4 import (
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:33:    Gemma4AudioConfig,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:34:    Gemma4TextConfig,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:49:from vllm.model_executor.models.gemma4 import (
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:50:    _GEMMA4_EXPERT_PARENT_MAPPER,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:51:    Gemma4ForCausalLM,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:108:# Video constants — match transformers Gemma4VideoProcessor defaults.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:134:class Gemma4ImagePixelInputs(TensorSchema):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:136:    Pre-patchified image inputs from the Gemma4 image processor.
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:143:    The Gemma4 image processor outputs pixel_values as
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:161:class Gemma4AudioInputs(TensorSchema):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:178:Gemma4ImageInputs = Gemma4ImagePixelInputs
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:181:class Gemma4VideoInputs(TensorSchema):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:184:    Gemma4 has no separate video tower; video frames are processed
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:205:class Gemma4ProcessingInfo(BaseProcessingInfo):
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:207:        return self.ctx.get_hf_config(Gemma4Config)
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:210:        """Gemma4's chat template already embeds a literal ``<bos>`` token in
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:228:    def get_hf_processor(self, **kwargs: object) -> Gemma4Processor:
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:230:            Gemma4Processor,
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:247:                f"Audio inference is only supported for Gemma4 "
+/tmp/gemma4-m27-vllm-candidate/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py:339:        processor: Gemma4Processor | None,

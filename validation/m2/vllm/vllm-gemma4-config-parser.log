@@ -1,0 +1,3 @@
+config = Gemma4Config
+model_type = gemma4
+VLLM_GEMMA4_CONFIG_PARSE=PASS

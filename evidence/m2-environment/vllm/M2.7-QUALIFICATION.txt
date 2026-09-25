@@ -1,0 +1,201 @@
+Gemma 4 Developer Agent
+M2.7 vLLM / Gemma 4 Feasibility Qualification
+=============================================
+
+QUALIFIED RUNTIME
+-----------------
+
+vLLM:
+  0.30.0
+
+Python:
+  3.12.3
+
+PyTorch:
+  2.13.0+cu130
+
+PyTorch CUDA runtime:
+  13.0
+
+Triton:
+  3.7.1
+
+Transformers:
+  5.17.0
+
+compressed-tensors:
+  0.17.0
+
+
+HARDWARE
+--------
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+GPU memory:
+  approximately 16 GiB
+
+Compute capability:
+  12.0
+
+
+MODEL
+-----
+
+Repository:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+Revision:
+  52f3f65bc7a02d555763bc923bd1d9094898219d
+
+Weight SHA256:
+  1b9b1d622a93f02c0d33f98e502f233b5d707443af6ddc464ed0bf5498506c20
+
+Quantization:
+  compressed-tensors W4A16
+
+Weight group size:
+  32
+
+
+LOAD QUALIFICATION
+------------------
+
+Native GPU-only load:
+  FAIL
+
+Classification:
+  expected resource-capacity limitation
+
+Cause:
+  CUDA OOM
+
+12 GiB CPU offload:
+  PASS
+
+Observed offloader:
+  UVAOffloader
+
+Observed offloaded amount:
+  12.03
+
+Observed model GPU memory:
+  approximately 7.56 GiB
+
+Observed KV cache:
+  approximately 3.6–3.7 GiB
+
+
+RUNTIME BACKENDS
+----------------
+
+Quantization:
+  compressed-tensors
+
+Linear kernel:
+  MarlinLinearKernel for CompressedTensorsWNA16
+
+Attention:
+  TRITON_ATTN
+
+Sampling:
+  FlashInfer
+
+Custom fusions:
+  norm_quant
+  act_quant
+
+
+SEMANTIC QUALIFICATION
+----------------------
+
+Model-native chat:
+  PASS
+
+Arithmetic semantic test:
+  PASS
+
+Coding semantic test:
+  PASS
+
+Deterministic repeatability:
+  PASS 3 / FAIL 0
+
+
+IMPORTANT PROMPTING RESULT
+--------------------------
+
+Raw LLM.generate() completion prompting produced semantically invalid
+output.
+
+LLM.chat() using the model-native Gemma 4 chat template produced
+correct semantic output.
+
+Therefore the qualified inference path requires Gemma 4 chat
+formatting or an equivalent correctly rendered model-native template.
+
+
+RESOURCE CHARACTERIZATION
+-------------------------
+
+Semantic-chat peak VRAM:
+  14935 MiB
+
+Semantic-chat minimum available host RAM:
+  15.425 GiB
+
+Coding-chat peak VRAM:
+  15234 MiB
+
+Coding-chat minimum available host RAM:
+  17.035 GiB
+
+Repeatability peak VRAM:
+  14931 MiB
+
+Repeatability minimum available host RAM:
+  15.586 GiB
+
+
+PERFORMANCE CHARACTERIZATION
+----------------------------
+
+Semantic model initialization:
+  393.394352 s
+
+Semantic generation:
+  2.237349 s
+
+Coding model initialization:
+  363.775376 s
+
+Coding generation:
+  18.839868 s
+
+Coding output:
+  26 tokens
+
+Coding measured generation rate:
+  1.380052 tokens/s
+
+
+DECISION
+--------
+
+M2.7:
+  QUALIFIED_WITH_CPU_OFFLOAD
+
+Node1 classification:
+  Gemma 4 31B W4A16 is functionally feasible with vLLM 0.30.0
+  using 12 GiB CPU offload.
+
+Native GPU-only residency:
+  NOT FEASIBLE on the tested 16 GiB GPU.
+
+This qualification does not imply acceptable production latency,
+throughput, long-context performance, multi-user concurrency, or
+SWE-bench performance.
+
+vLLM remains isolated from the M2.6 project environment because its
+qualified PyTorch/Triton dependency stack differs from the M2.6 stack.

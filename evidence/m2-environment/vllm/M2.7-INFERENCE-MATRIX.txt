@@ -1,0 +1,215 @@
+Gemma 4 Developer Agent
+M2.7 Inference Matrix
+=====================
+
+Model:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+Repository revision:
+  52f3f65bc7a02d555763bc923bd1d9094898219d
+
+vLLM:
+  0.30.0
+
+PyTorch:
+  2.13.0+cu130
+
+Triton:
+  3.7.1
+
+compressed-tensors:
+  0.17.0
+
+CPU offload:
+  12 GiB
+
+
+TEST 1 — Native GPU load
+------------------------
+
+Result:
+  FAIL
+
+Classification:
+  expected resource-capacity failure
+
+Reason:
+  CUDA out of memory on 16 GiB GPU
+
+
+TEST 2 — CPU-offloaded load
+---------------------------
+
+Result:
+  PASS
+
+Offloader:
+  UVAOffloader
+
+Observed CPU offload:
+  12.03 GiB-equivalent parameters
+
+Quantization:
+  compressed-tensors
+
+Linear kernel:
+  MarlinLinearKernel for CompressedTensorsWNA16
+
+Attention backend:
+  TRITON_ATTN
+
+
+TEST 3 — Raw text generation
+----------------------------
+
+Result:
+  SEMANTIC FAIL
+
+Meaning:
+  token emission succeeded but output was not semantically valid
+
+Interpretation:
+  raw completion prompting is not accepted as a valid Gemma 4
+  inference path for this qualification
+
+
+TEST 4 — Model-native chat generation
+-------------------------------------
+
+Prompt:
+  What is 17 + 25?
+
+Expected:
+  42
+
+Observed:
+  42
+
+Result:
+  PASS
+
+
+TEST 5 — Coding chat
+--------------------
+
+Task:
+  implement add(a, b) returning a + b
+
+Observed output:
+  def add(a: int, b: int) -> int:
+      return a + b
+
+Function gate:
+  PASS
+
+Return-expression gate:
+  PASS
+
+Semantic result:
+  PASS
+
+
+TEST 6 — Deterministic repeatability
+------------------------------------
+
+7 + 8:
+  expected 15
+  observed 15
+  PASS
+
+6 * 9:
+  expected 54
+  observed 54
+  PASS
+
+100 - 37:
+  expected 63
+  observed 63
+  PASS
+
+Aggregate:
+  PASS=3
+  FAIL=0
+
+Result:
+  PASS
+
+
+RESOURCE CHARACTERIZATION
+-------------------------
+
+Semantic chat:
+  peak VRAM used:
+    14935 MiB
+
+  minimum host RAM available:
+    15.425 GiB
+
+Coding chat:
+  peak VRAM used:
+    15234 MiB
+
+  minimum host RAM available:
+    17.035 GiB
+
+Repeatability:
+  peak VRAM used:
+    14931 MiB
+
+  minimum host RAM available:
+    15.586 GiB
+
+
+PERFORMANCE CHARACTERIZATION
+----------------------------
+
+Semantic chat:
+  model initialization:
+    393.394352 s
+
+  generation:
+    2.237349 s
+
+  output tokens:
+    3
+
+Coding chat:
+  model initialization:
+    363.775376 s
+
+  generation:
+    18.839868 s
+
+  output tokens:
+    26
+
+  measured output rate:
+    1.380052 tokens/s
+
+
+CURRENT CLASSIFICATION
+----------------------
+
+Model load:
+  FEASIBLE_WITH_CPU_OFFLOAD
+
+Native 16 GiB GPU-only residency:
+  NOT FEASIBLE
+
+Gemma 4 chat semantic inference:
+  PASS
+
+Coding inference:
+  PASS
+
+Deterministic repeatability:
+  PASS
+
+compressed-tensors runtime:
+  PASS
+
+Marlin W4A16 backend:
+  PASS
+
+M2.7 feasibility:
+  QUALIFIED_WITH_CPU_OFFLOAD

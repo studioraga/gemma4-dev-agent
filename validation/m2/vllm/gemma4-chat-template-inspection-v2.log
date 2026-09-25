@@ -1,0 +1,6 @@
+=== TEMPLATE ===
+'<bos><|turn>user\nWhat is 17 + 25?<turn|>\n<|turn>model\n<|channel>thought\n<channel|>'
+
+token_count = 2
+last_30_ids = [Encoding(num_tokens=23, attributes=[ids, type_ids, tokens, offsets, attention_mask, special_tokens_mask, overflowing])]
+GEMMA4_CHAT_TEMPLATE_INSPECTION=PASS

@@ -1,0 +1,12 @@
+repo = google/gemma-4-31B-it-qat-w4a16-ct
+revision = 52f3f65bc7a02d555763bc923bd1d9094898219d
+.gitattributes	1570
+README.md	29380
+chat_template.jinja	18683
+config.json	18711
+generation_config.json	208
+model.safetensors	23265352448
+processor_config.json	1689
+tokenizer.json	32169626
+tokenizer_config.json	3728
+HF_REPOSITORY_IDENTITY=PASS

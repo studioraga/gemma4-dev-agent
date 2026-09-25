@@ -1,0 +1,4 @@
+class = Gemma4Config
+model_type = gemma4
+quant_method = compressed-tensors
+VLLM_FULL_LOCAL_CONFIG_PARSE=PASS

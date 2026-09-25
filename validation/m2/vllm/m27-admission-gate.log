@@ -1,0 +1,17 @@
+Gemma 4 Developer Agent
+M2.7 vLLM Admission Gate
+==================================================
+vllm = 0.30.0
+torch = 2.13.0+cu130
+torch CUDA = 13.0
+triton = 3.7.1
+[PASS] vLLM 0.30.0
+[PASS] CUDA available
+[PASS] Blackwell compute capability 12.0
+[PASS] Gemma 4 model type
+[PASS] quantization config exists
+[PASS] compressed-tensors metadata
+[PASS] full model weights not yet downloaded
+
+PASS=7 FAIL=0
+RESULT=PASS

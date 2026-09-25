@@ -1,0 +1,4 @@
+vllm = 0.30.0
+LLM = <class 'vllm.entrypoints.llm.LLM'>
+SamplingParams = <class 'vllm.sampling_params.SamplingParams'>
+VLLM_IMPORT_SMOKE=PASS

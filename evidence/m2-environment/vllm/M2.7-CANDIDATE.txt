@@ -1,0 +1,31 @@
+Gemma 4 Developer Agent
+M2.7 vLLM Candidate
+===================
+
+Candidate:
+  vLLM 0.30.0
+
+Platform:
+  Linux x86_64
+
+Python:
+  3.12
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+GPU compute capability:
+  12.0
+
+Target CUDA family:
+  CUDA 13.0
+
+Exact model target:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+M2.7 policy:
+  vLLM is qualified in an isolated candidate environment.
+
+The M2.6 project environment is not modified until the vLLM
+dependency graph, CUDA support, compressed-tensors support, and
+model feasibility have been independently validated.

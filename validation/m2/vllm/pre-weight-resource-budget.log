@@ -1,0 +1,11 @@
+=== RAM ===
+               total        used        free      shared  buff/cache   available
+Mem:     50197995520 13899427840 12202381312  1056186368 25752989696 36298567680
+Swap:     8589930496           0  8589930496
+
+=== GPU ===
+16311, 542, 15298
+
+=== DISK ===
+Filesystem         1B-blocks          Used    Available Use% Mounted on
+/dev/nvme0n1p2 1966736678912 1099209900032 767546527744  59% /

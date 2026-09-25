@@ -1,0 +1,58 @@
+Gemma 4 Developer Agent
+M2.7 Runtime Separation Decision
+================================
+
+M2.6 project runtime
+--------------------
+
+torch:
+  2.14.0+cu130
+
+torchvision:
+  0.29.0+cu130
+
+triton:
+  3.8.0
+
+numpy:
+  2.5.3
+
+
+M2.7 vLLM runtime
+-----------------
+
+vllm:
+  0.30.0
+
+torch:
+  2.13.0+cu130
+
+torchvision:
+  0.28.0+cu130
+
+triton:
+  3.7.1
+
+numpy:
+  2.3.5
+
+compressed-tensors:
+  0.17.0
+
+
+Decision
+--------
+
+Do not merge vLLM 0.30.0 into the M2.6 project Python environment.
+
+The vLLM runtime is treated as an isolated execution environment until
+a future dependency convergence exercise proves a shared stack.
+
+Supported future deployment forms:
+
+  dedicated virtual environment
+  isolated runtime lock/profile
+  containerized vLLM service
+
+This decision protects the previously qualified M2.4, M2.5 and M2.6
+dependency baselines.

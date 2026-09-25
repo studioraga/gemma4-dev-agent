@@ -1,0 +1,25 @@
+=== DATE ===
+2026-09-25T15:55:12+05:30
+
+=== HOST ===
+sr-kaaldev
+Linux sr-kaaldev 7.0.0-31-generic #31~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Aug 10 09:38:02 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+=== RAM ===
+               total        used        free      shared  buff/cache   available
+Mem:            46Gi        12Gi        17Gi       988Mi        18Gi        33Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+=== SWAP ===
+NAME      TYPE SIZE USED PRIO
+/swap.img file   8G   0B   -1
+
+=== ROOT DISK ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  1.8T 1019G  721G  59% /
+
+=== GPU ===
+NVIDIA GeForce RTX 5060 Ti, 16311 MiB, 523 MiB, 15317 MiB, 580.159.03
+
+=== PROJECT COMMIT ===
+f5413eff9795cd3609c872e525392432dee091cf

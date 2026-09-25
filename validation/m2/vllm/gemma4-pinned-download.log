@@ -1,0 +1,3 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  14%|█▍        | 1/7 [00:00<00:02,  2.94it/s]Fetching 7 files:  57%|█████▋    | 4/7 [00:00<00:00,  8.99it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:04<00:00,  1.05it/s]Fetching 7 files: 100%|██████████| 7/7 [30:55<00:00, 440.04s/it]Fetching 7 files: 100%|██████████| 7/7 [30:55<00:00, 265.06s/it]
+[32m✓ Downloaded[0m
+  path: /home/rmk/models/gemma4/gemma-4-31B-it-qat-w4a16-ct-52f3f65bc7a02d555763bc923bd1d9094898219d

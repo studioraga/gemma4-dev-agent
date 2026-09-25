@@ -1,0 +1,130 @@
+Gemma 4 Developer Agent
+M2.7 Interim Findings
+=====================
+
+Exact model:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+Repository revision:
+  52f3f65bc7a02d555763bc923bd1d9094898219d
+
+Weight SHA256:
+  1b9b1d622a93f02c0d33f98e502f233b5d707443af6ddc464ed0bf5498506c20
+
+Runtime:
+  vLLM 0.30.0
+  PyTorch 2.13.0+cu130
+  Triton 3.7.1
+  compressed-tensors 0.17.0
+
+MODEL LOAD
+----------
+
+Native GPU / no offload:
+  FAIL
+
+Reason:
+  CUDA out of memory
+
+12 GiB CPU offload:
+  PASS
+
+Observed offload backend:
+  UVAOffloader
+
+Observed quantization:
+  compressed-tensors
+
+Observed linear kernel:
+  MarlinLinearKernel for CompressedTensorsWNA16
+
+Model-loading GPU memory:
+  approximately 7.56 GiB
+
+Observed available KV cache:
+  approximately 3.63 GiB
+
+Observed peak VRAM during 12 GiB offload load:
+  15180 MiB
+
+Observed minimum host available RAM:
+  approximately 14.16 GiB
+
+
+GENERATION
+----------
+
+Initial token-emission smoke:
+  EXECUTED
+
+Semantic result:
+  FAIL / NOT QUALIFIED
+
+Observed output:
+  whitespace-only output
+
+Initial coding smoke:
+  EXECUTED
+
+Semantic result:
+  FAIL / NOT QUALIFIED
+
+Observed behavior:
+  repetitive nonsensical token sequence
+
+The historical PASS markers in those two initial logs prove only
+that output token IDs were generated. They do not establish semantic
+generation correctness.
+
+
+RESOURCE MEASUREMENT
+--------------------
+
+12 GiB offload load monitor:
+  VALID
+
+Initial coding-smoke resource monitor:
+  INVALID
+
+Reason:
+  monitor timestamps occurred after the coding inference process
+  had already terminated.
+
+
+CURRENT DECISION
+----------------
+
+Model loading:
+  FEASIBLE_WITH_CPU_OFFLOAD
+
+Semantic generation:
+  PASS
+
+Validated semantic prompt:
+  What is 17 + 25?
+  Expected answer: 42
+  Observed answer: 42
+
+Generation mode:
+  vLLM LLM.chat()
+  model-native Gemma 4 chat template
+  temperature=0.0
+
+12 GiB CPU-offload semantic inference:
+  PASS
+
+Coding-oriented semantic generation:
+  PASS
+
+Deterministic repeatability:
+  PASS
+
+Repeatability aggregate:
+  PASS=3
+  FAIL=0
+
+Current feasibility classification:
+  QUALIFIED_WITH_CPU_OFFLOAD
+
+Next action:
+  freeze M2.7 evidence and preserve vLLM as an isolated runtime.

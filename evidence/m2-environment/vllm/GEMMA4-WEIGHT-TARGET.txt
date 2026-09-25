@@ -1,0 +1,29 @@
+Gemma 4 Developer Agent
+M2.7 Exact Weight Target
+========================
+
+Repository:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+Revision:
+  52f3f65bc7a02d555763bc923bd1d9094898219d
+
+Weight:
+  model.safetensors
+
+Published size:
+  23.3 GB
+
+Expected SHA256:
+  1b9b1d622a93f02c0d33f98e502f233b5d707443af6ddc464ed0bf5498506c20
+
+Quantization:
+  compressed-tensors
+  W4A16
+  group_size=32
+
+Runtime candidate:
+  vLLM 0.30.0
+
+This record binds the M2.7 feasibility work to one immutable
+repository revision and one weight digest.
