@@ -1,0 +1,20 @@
+[project]
+name = "gemma4-dev-agent"
+version = "0.1.0"
+description = "Local-first Gemma 4 software-engineering agent research and competition platform"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gemma_dev_agent"]
+
+[dependency-groups]
+dev = []
+test = []
+gpu = []
+training = []
+evaluation = []

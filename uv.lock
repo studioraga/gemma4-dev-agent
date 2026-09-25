@@ -1,0 +1,17 @@
+version = 1
+revision = 3
+requires-python = "==3.12.*"
+
+[[package]]
+name = "gemma4-dev-agent"
+version = "0.1.0"
+source = { editable = "." }
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = []
+evaluation = []
+gpu = []
+test = []
+training = []

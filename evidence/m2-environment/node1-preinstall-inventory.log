@@ -1,0 +1,37 @@
+==================================================
+M2 NODE1 PRE-INSTALL SOFTWARE INVENTORY
+==================================================
+date=2026-09-25T12:04:35+05:30
+
+=== SOURCE ===
+branch=m2-reproducible-environment
+commit=16a420064d4589d81b67b7fe0b1f37968625537b
+m1_tag=16222fea306c5118458302ab3c780f8bd8bf0752
+
+=== PYTHON ===
+Python 3.12.3
+/usr/bin/python3
+version: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+executable: /usr/bin/python3
+implementation: CPython
+machine: x86_64
+
+=== SYSTEM PIP ===
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+
+=== VENV SUPPORT ===
+VENV_RC=0
+
+=== UV ===
+UV_BIN=/home/rmk/.local/bin/uv
+uv 0.12.5 (x86_64-unknown-linux-gnu)
+
+=== CUDA ===
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2026 NVIDIA Corporation
+Built on Fri_Apr_24_07:22:02_PM_PDT_2026
+Cuda compilation tools, release 13.3, V13.3.33
+Build cuda_13.3.r13.3/compiler.37862127_0
+
+=== GPU ===
+NVIDIA GeForce RTX 5060 Ti, 580.159.03, 12.0, 16311 MiB

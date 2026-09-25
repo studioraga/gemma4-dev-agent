@@ -1,0 +1,20 @@
+Gemma 4 Developer Agent
+M2 Base Environment Qualification
+==================================================
+[PASS] Python 3.12 (3.12.3)
+[PASS] project virtual environment active
+[PASS] CPython runtime (CPython)
+[PASS] Node1 architecture x86_64 (x86_64)
+[PASS] uv executable available
+[PASS] CUDA 13.3 nvcc present
+[PASS] nvcc executable works
+[PASS] CUDA toolkit release 13.3
+[PASS] nvidia-smi available
+[PASS] nvidia-smi query works
+GPU_QUERY=NVIDIA GeForce RTX 5060 Ti, 580.159.03, 12.0
+[PASS] expected RTX 5060 Ti
+[PASS] qualified R580 driver
+[PASS] compute capability 12.0 / sm_120
+
+PASS=13 FAIL=0
+RESULT=PASS

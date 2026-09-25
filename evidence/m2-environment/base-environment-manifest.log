@@ -1,0 +1,42 @@
+==================================================
+M2 BASE ENVIRONMENT MANIFEST
+==================================================
+date=2026-09-25T12:20:57+05:30
+branch=m2-reproducible-environment
+commit=16a420064d4589d81b67b7fe0b1f37968625537b
+
+=== M1 BASELINE ===
+16222fea306c5118458302ab3c780f8bd8bf0752
+
+=== UV ===
+uv 0.12.5 (x86_64-unknown-linux-gnu)
+
+=== PYTHON ===
+Python 3.12.3
+
+=== PYTHON EXECUTABLE ===
+/home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/bin/python3
+
+=== DEPENDENCY TREE ===
+Resolved 1 package in 1ms
+gemma4-dev-agent v0.1.0
+
+=== LOCK HASH ===
+26be8d6fec2fe6dc3f323e52be444bce7441d55ef7fe7840d1c286b94e33352c  uv.lock
+
+=== PYPROJECT HASH ===
+678c9016adb34594262e50714774ad19e4e8f6ea82cd34ef8c8a8044bda674b8  pyproject.toml
+
+=== TOOLCHAIN CONTRACT ===
+M1_BASELINE_COMMIT=16222fea306c5118458302ab3c780f8bd8bf0752
+
+M2_UV_VERSION=0.12.5
+
+M2_NODE1_PYTHON=3.12
+M2_NODE1_CUDA=13.3
+M2_NODE1_CUDA_ARCH=sm_120
+M2_NODE1_DRIVER=580.159.03
+
+M2_NODE2_PYTHON=3.10
+M2_NODE2_CUDA=12.6
+M2_NODE2_CUDA_ARCH=sm_87
