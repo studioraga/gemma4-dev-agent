@@ -1,0 +1,4 @@
+device = cuda
+mixed_precision = no
+num_processes = 1
+ACCELERATE_SMOKE=PASS

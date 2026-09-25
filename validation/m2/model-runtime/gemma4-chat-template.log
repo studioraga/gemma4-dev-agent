@@ -1,0 +1,7 @@
+=== RENDERED TEMPLATE ===
+<bos><|turn>user
+Fix the failing unit test and explain the patch.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+GEMMA4_CHAT_TEMPLATE=PASS

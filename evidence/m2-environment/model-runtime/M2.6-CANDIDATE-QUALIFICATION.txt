@@ -1,0 +1,92 @@
+Gemma 4 Developer Agent
+M2.6 Model Runtime Candidate Qualification
+==========================================
+
+Python:
+  3.12.3
+
+NumPy:
+  2.5.3
+
+PyTorch:
+  2.14.0+cu130
+
+PyTorch CUDA runtime:
+  13.0
+
+Triton:
+  3.8.0
+
+Transformers:
+  5.17.0
+
+Accelerate:
+  1.15.0
+
+safetensors:
+  0.8.0
+
+tokenizers:
+  0.23.2
+
+huggingface-hub:
+  1.33.0
+
+Pillow:
+  12.3.0
+
+torchvision:
+  0.29.0+cu130
+
+Exact target:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+
+QUALIFICATION
+-------------
+
+Gemma4Config symbol:
+  PASS
+
+Gemma4Processor symbol:
+  PASS
+
+Model config offline load:
+  PASS
+
+Processor offline load:
+  PASS
+
+Tokenizer offline load:
+  PASS
+
+Chat template offline render:
+  PASS
+
+safetensors round-trip:
+  PASS
+
+Accelerate single-process initialization:
+  PASS
+
+No model weights downloaded:
+  PASS
+
+Qualified GPU foundation preserved:
+  PASS
+
+torchvision native extension:
+  PASS
+
+torchvision CUDA NMS:
+  PASS
+
+
+DECISION
+--------
+
+M2.6 candidate:
+  ACCEPT
+
+This qualification covers model-runtime metadata and supporting
+libraries only. It does not qualify full Gemma 4 model inference.

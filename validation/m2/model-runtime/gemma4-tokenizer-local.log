@@ -1,0 +1,4 @@
+tokenizer_class = GemmaTokenizer
+num_tokens = 17
+decoded_prefix = 'Write a Python function that returns the SHA-256 digest of a file.'
+GEMMA4_TOKENIZER_LOCAL=PASS

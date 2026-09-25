@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Local-first Gemma 4 software-engineering agent research and competition platform"
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    "accelerate==1.15.0",
     "numpy==2.5.3",
+    "pillow==12.3.0",
+    "safetensors==0.8.0",
+    "transformers==5.17.0",
 ]
 
 [build-system]
@@ -19,6 +23,7 @@ dev = []
 test = []
 gpu = [
     "torch==2.14.0",
+    "torchvision==0.29.0",
 ]
 training = []
 evaluation = []
@@ -30,3 +35,4 @@ explicit = true
 
 [tool.uv.sources]
 torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }

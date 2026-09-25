@@ -1,0 +1,6 @@
+processor_class = Gemma4Processor
+tokenizer = GemmaTokenizer
+image_processor = Gemma4ImageProcessor
+video_processor = Gemma4VideoProcessor
+feature_extractor = Gemma4AudioFeatureExtractor
+GEMMA4_PROCESSOR_CU130_TORCHVISION=PASS

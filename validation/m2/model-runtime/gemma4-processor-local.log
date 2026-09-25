@@ -1,0 +1,2 @@
+processor_class = Gemma4Processor
+GEMMA4_PROCESSOR_LOCAL=PASS

@@ -1,0 +1,9 @@
+transformers         NOT_INSTALLED
+tokenizers           NOT_INSTALLED
+safetensors          NOT_INSTALLED
+accelerate           NOT_INSTALLED
+huggingface_hub      NOT_INSTALLED
+sentencepiece        NOT_INSTALLED
+vllm                 NOT_INSTALLED
+flash_attn           NOT_INSTALLED
+bitsandbytes         NOT_INSTALLED

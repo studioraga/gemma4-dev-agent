@@ -1,0 +1,3 @@
+class = Gemma4Config
+model_type = gemma4
+LOCKED_GEMMA4_CONFIG=PASS

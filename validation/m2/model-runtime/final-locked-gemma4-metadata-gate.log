@@ -1,0 +1,11 @@
+Gemma 4 Developer Agent
+M2.6 Locked Gemma 4 Metadata Gate
+================================================
+[PASS] Gemma4Config
+[PASS] Gemma tokenizer
+[PASS] chat template
+[PASS] Gemma4Processor
+[PASS] torchvision native ops
+[PASS] CUDA cc 12.0
+[PASS] no model weights
+RESULT=PASS

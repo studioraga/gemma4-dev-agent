@@ -1,0 +1,14 @@
+=== DATE ===
+2026-09-25T14:12:27+05:30
+
+=== RAM ===
+               total        used        free      shared  buff/cache   available
+Mem:            46Gi        12Gi        17Gi       954Mi        17Gi        34Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+=== ROOT DISK ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  1.8T 1018G  721G  59% /
+
+=== GPU ===
+NVIDIA GeForce RTX 5060 Ti, 16311 MiB, 609 MiB, 15231 MiB, 580.159.03

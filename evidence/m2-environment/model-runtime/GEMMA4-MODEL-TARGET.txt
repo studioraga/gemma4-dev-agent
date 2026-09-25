@@ -1,0 +1,24 @@
+Gemma 4 Developer Agent
+M2.6 exact model metadata target
+================================
+
+Repository:
+  google/gemma-4-31B-it-qat-w4a16-ct
+
+M2.6 qualification scope:
+  model configuration
+  tokenizer metadata
+  processor metadata
+  chat template
+  Transformers compatibility
+  safetensors library
+  Accelerate initialization
+
+Explicitly excluded from M2.6:
+  model-weight download
+  model-weight loading
+  full model inference
+  VRAM-fit qualification
+  vLLM qualification
+  FlashAttention qualification
+  bitsandbytes qualification

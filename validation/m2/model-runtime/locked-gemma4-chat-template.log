@@ -1,0 +1,6 @@
+<bos><|turn>user
+Fix the failing test and explain the patch.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+LOCKED_GEMMA4_CHAT_TEMPLATE=PASS

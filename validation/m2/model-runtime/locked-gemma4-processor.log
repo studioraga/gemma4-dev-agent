@@ -1,0 +1,5 @@
+processor = Gemma4Processor
+image = Gemma4ImageProcessor
+video = Gemma4VideoProcessor
+audio = Gemma4AudioFeatureExtractor
+LOCKED_GEMMA4_PROCESSOR=PASS

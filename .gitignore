@@ -58,7 +58,6 @@ checkpoints/
 *.pt
 *.pth
 *.ckpt
-*.safetensors
 
 # --------------------------------------------------
 # Data / datasets

@@ -1,0 +1,32 @@
+Gemma 4 Developer Agent
+M2.6 Locked Dependency Note
+===========================
+
+The M2.6 project lock resolved some transitive dependencies to versions
+different from the earlier temporary PyTorch qualification candidate.
+
+The qualified top-level GPU stack remained:
+
+  torch       2.14.0+cu130
+  torchvision 0.29.0+cu130
+  triton      3.8.0
+  CUDA runtime reported by PyTorch 13.0
+
+Acceptance basis:
+
+  PyTorch Blackwell regression:
+    PASS 13 / FAIL 0
+
+  Triton cold-cache normal execution:
+    PASS
+
+  Triton cold-cache execution with CUDA_DISABLE_PTX_JIT=1:
+    PASS
+
+  Triton warm-cache execution with CUDA_DISABLE_PTX_JIT=1:
+    PASS
+
+Therefore the locked dependency resolution is accepted for M2.6.
+
+This acceptance applies to the tested locked environment and does not
+automatically qualify future dependency upgrades.
