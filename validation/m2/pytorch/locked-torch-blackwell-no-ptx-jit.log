@@ -1,0 +1,39 @@
+Gemma 4 Developer Agent
+PyTorch Blackwell Qualification
+============================================================
+python=3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+torch=2.14.0+cu130
+torch_cuda_runtime=13.0
+[PASS] Python 3.12
+[PASS] PyTorch 2.14.0 (2.14.0+cu130)
+[PASS] CUDA-enabled PyTorch (13.0)
+[PASS] torch.cuda.is_available()
+device_name=NVIDIA GeForce RTX 5060 Ti
+compute_capability=(12, 0)
+arch_list=['sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120']
+[PASS] expected RTX 5060 Ti (NVIDIA GeForce RTX 5060 Ti)
+[PASS] compute capability 12.0 ((12, 0))
+[PASS] native sm_120 listed (['sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120'])
+
+=== ALLOCATION ===
+[PASS] CUDA tensor allocation
+[PASS] tensor resides on CUDA device
+
+=== ELEMENTWISE ===
+[PASS] elementwise CUDA correctness
+
+=== MATMUL ===
+[PASS] matrix multiplication executed on CUDA
+[PASS] matrix multiplication finite output
+
+=== CUDA EVENT TIMING ===
+elapsed_10_matmuls_ms=3.678
+[PASS] CUDA event timing
+
+=== MEMORY ===
+allocated_bytes= 67302912
+reserved_bytes= 98566144
+
+============================================================
+PASS=13 FAIL=0
+RESULT=PASS

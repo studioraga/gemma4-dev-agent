@@ -1,0 +1,109 @@
+Gemma 4 Developer Agent
+M2.4 PyTorch / Blackwell / sm_120 Qualification
+=================================================
+
+Baseline M2 commit:
+  ae99be564621fcb9b960ea6cab2c3845257c742a
+
+Python:
+  CPython 3.12.3
+
+NumPy:
+  2.5.3
+
+PyTorch:
+  2.14.0+cu130
+
+PyTorch CUDA runtime:
+  13.0
+
+Host CUDA toolkit:
+  13.3
+
+NVIDIA driver:
+  580.159.03
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0 / sm_120
+
+
+QUALIFICATION
+-------------
+
+PyTorch import:
+  PASS
+
+CUDA availability:
+  PASS
+
+GPU detection:
+  PASS
+
+compute capability 12.0:
+  PASS
+
+PyTorch sm_120 architecture:
+  PASS
+
+CUDA tensor allocation:
+  PASS
+
+CUDA elementwise execution:
+  PASS
+
+CUDA matrix multiplication:
+  PASS
+
+CUDA event timing:
+  PASS
+
+PyTorch runtime with CUDA_DISABLE_PTX_JIT=1:
+  PASS
+
+PyTorch / NumPy interoperability:
+  PASS
+
+Host CUDA 13.3 custom extension compilation:
+  PASS
+
+Extension target:
+  compute_120 / sm_120
+
+Extension execution:
+  PASS
+
+Extension native sm_120 cubin:
+  PASS
+
+Extension with CUDA_DISABLE_PTX_JIT=1:
+  PASS
+
+
+DECISION
+--------
+
+PyTorch 2.14.0+cu130:
+  QUALIFIED
+
+NumPy:
+  QUALIFIED for PyTorch interoperability
+
+Host driver:
+  PRESERVED
+
+Host CUDA 13.3:
+  PRESERVED
+
+
+NOT YET QUALIFIED
+-----------------
+
+Triton
+vLLM
+FlashAttention
+bitsandbytes
+quantization runtimes
+Gemma-specific runtime kernels

@@ -1,0 +1,101 @@
+PyTorch Candidate Decision
+==========================
+
+Candidate
+---------
+
+PyTorch:
+  2.14.0+cu130
+
+PyTorch CUDA runtime:
+  13.0
+
+Python:
+  CPython 3.12.3
+
+NumPy:
+  2.5.3
+
+Platform:
+  Linux x86_64
+
+
+Qualified host
+--------------
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0 / sm_120
+
+NVIDIA driver:
+  580.159.03
+
+Host CUDA toolkit:
+  CUDA 13.3
+
+
+Validation results
+------------------
+
+PyTorch import:
+  PASS
+
+torch.cuda.is_available():
+  PASS
+
+RTX 5060 Ti detection:
+  PASS
+
+compute capability 12.0:
+  PASS
+
+torch architecture list includes sm_120:
+  PASS
+
+CUDA tensor allocation:
+  PASS
+
+CUDA elementwise correctness:
+  PASS
+
+CUDA matrix multiplication:
+  PASS
+
+CUDA event timing:
+  PASS
+
+CUDA_DISABLE_PTX_JIT=1 PyTorch runtime:
+  PASS
+
+Host CUDA 13.3 extension compilation:
+  PASS
+
+Explicit extension compile target:
+  compute_120 / sm_120
+
+Custom CUDA extension execution:
+  PASS
+
+cuobjdump native sm_120 cubin:
+  PASS
+
+Custom extension with CUDA_DISABLE_PTX_JIT=1:
+  PASS
+
+PyTorch / NumPy interoperability:
+  PASS
+
+
+Decision
+--------
+
+ACCEPT
+
+PyTorch 2.14.0+cu130 is admitted as the Node1 PyTorch candidate for the
+M2 reproducible environment.
+
+This acceptance does not automatically qualify Triton, FlashAttention,
+bitsandbytes, vLLM, quantization kernels, or other GPU runtimes.
+Those components require their own qualification.

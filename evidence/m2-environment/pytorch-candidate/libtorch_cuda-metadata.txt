@@ -1,0 +1,5 @@
+artifact=libtorch_cuda.so
+sha256=9ed4b912d08ae0a59c1638e9077b6d8f0439d7bd680e4a1a274441d42dd7b3f9
+size_bytes=502842281
+torch_version=2.14.0+cu130
+torch_cuda_runtime=13.0

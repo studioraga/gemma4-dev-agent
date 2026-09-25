@@ -3,7 +3,9 @@ name = "gemma4-dev-agent"
 version = "0.1.0"
 description = "Local-first Gemma 4 software-engineering agent research and competition platform"
 requires-python = ">=3.12,<3.13"
-dependencies = []
+dependencies = [
+    "numpy==2.5.3",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -15,6 +17,16 @@ packages = ["src/gemma_dev_agent"]
 [dependency-groups]
 dev = []
 test = []
-gpu = []
+gpu = [
+    "torch==2.14.0",
+]
 training = []
 evaluation = []
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }

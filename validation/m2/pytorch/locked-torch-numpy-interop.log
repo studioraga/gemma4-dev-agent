@@ -1,0 +1,18 @@
+Gemma 4 Developer Agent
+PyTorch / NumPy Interoperability Qualification
+==========================================================
+python=3.12.3
+torch=2.14.0+cu130
+numpy=2.5.3
+[PASS] Python 3.12
+[PASS] PyTorch 2.14.0 (2.14.0+cu130)
+[PASS] NumPy float32 -> torch.float32
+[PASS] NumPy -> torch shape preserved
+[PASS] NumPy -> torch -> NumPy round-trip
+[PASS] torch CPU tensor -> NumPy ndarray
+[PASS] torch CPU -> NumPy correctness
+[PASS] CUDA available
+[PASS] CUDA -> CPU -> NumPy correctness
+
+PASS=9 FAIL=0
+RESULT=PASS

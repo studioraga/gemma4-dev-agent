@@ -1,0 +1,15 @@
+Gemma 4 Developer Agent
+PyTorch CUDA Extension / sm_120 Qualification
+================================================================
+python = 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+torch = 2.14.0+cu130
+torch runtime CUDA = 13.0
+device = NVIDIA GeForce RTX 5060 Ti
+capability = (12, 0)
+[1/3] c++ -MMD -MF main.o.d -DTORCH_EXTENSION_NAME=gemma4_sm120_extension -DTORCH_API_INCLUDE_EXTENSION_H -isystem /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/lib/python3.12/site-packages/torch/include -isystem /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda-13.3/include -isystem /usr/include/python3.12 -fPIC -std=c++20 -c /tmp/gemma4-torch-extensions-locked/gemma4_sm120_extension/main.cpp -o main.o 
+[2/3] /usr/local/cuda-13.3/bin/nvcc -MD -MF cuda.cuda.o.d -DTORCH_EXTENSION_NAME=gemma4_sm120_extension -DTORCH_API_INCLUDE_EXTENSION_H -isystem /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/lib/python3.12/site-packages/torch/include -isystem /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda-13.3/include -isystem /usr/include/python3.12 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_120,code=sm_120 --compiler-options '-fPIC' -O2 -std=c++20 -c /tmp/gemma4-torch-extensions-locked/gemma4_sm120_extension/cuda.cu -o cuda.cuda.o 
+[3/3] c++ main.o cuda.cuda.o -shared -L/home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/lib/python3.12/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda-13.3/lib64 -lcudart -o gemma4_sm120_extension.so
+
+EXTENSION_FILE= /tmp/gemma4-torch-extensions-locked/gemma4_sm120_extension/gemma4_sm120_extension.so
+EXTENSION_CORRECTNESS=PASS
+RESULT=PASS
