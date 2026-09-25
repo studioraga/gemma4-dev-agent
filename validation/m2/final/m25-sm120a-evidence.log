@@ -1,0 +1,17 @@
+evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:22:  sm_120a
+evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:25:  add_kernel.sm_120a.cubin
+evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:28:  sm_120a
+evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:37:The generated Triton kernel is specifically compiled as sm_120a.
+evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:42:  Triton generated target:    sm_120a
+evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt:30:  sm_120a
+evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt:33:  sm_120a
+evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt:56:  sm_120a
+evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt:66:  target=sm_120a
+evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt:84:The tested Triton kernel generates native sm_120a code and executes
+evidence/m2-environment/triton/add-kernel-ptx-target.txt:2:.target sm_120a
+evidence/m2-environment/model-runtime/M2.6-LOCKED-QUALIFICATION.txt:76:Triton sm_120a regression:
+validation/m2/triton/triton-cold-normal-cuobjdump.log:1:ELF file    1: add_kernel.sm_120a.cubin
+validation/m2/triton/triton-add-kernel-cuobjdump.log:1:ELF file    1: add_kernel.sm_120a.cubin
+validation/m2/triton/triton-add-kernel-ptx-header.log:6:.target sm_120a
+validation/m2/triton/triton-add-kernel-nvdisasm-head.log:1:	.target	sm_120a
+validation/m2/triton/triton-cold-no-ptx-cuobjdump.log:1:ELF file    1: add_kernel.sm_120a.cubin

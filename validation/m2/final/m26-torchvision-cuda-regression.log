@@ -1,0 +1,4 @@
+torch = 2.14.0+cu130
+torchvision = 0.29.0+cu130
+keep = [0, 2]
+M26_TORCHVISION_FINAL=PASS

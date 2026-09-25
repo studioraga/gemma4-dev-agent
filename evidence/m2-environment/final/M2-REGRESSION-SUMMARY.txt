@@ -1,0 +1,115 @@
+Gemma 4 Developer Agent
+M2 Final Regression Summary
+===========================
+
+M2.4 — PyTorch / Blackwell
+--------------------------
+
+PyTorch CUDA qualification:
+  PASS
+
+Blackwell compute capability 12.0:
+  PASS
+
+Native sm_120 support:
+  PASS
+
+CUDA_DISABLE_PTX_JIT regression:
+  PASS
+
+
+M2.5 — Triton
+-------------
+
+Triton 3.8.0:
+  PASS
+
+Cold-cache execution:
+  PASS
+
+Cold-cache CUDA_DISABLE_PTX_JIT execution:
+  PASS
+
+Observed generated target:
+  sm_120a
+
+
+M2.6 — Model Runtime Metadata
+-----------------------------
+
+Transformers 5.17.0:
+  PASS
+
+Gemma4Config:
+  PASS
+
+Gemma4Processor:
+  PASS
+
+Tokenizer:
+  PASS
+
+Chat template:
+  PASS
+
+torchvision CUDA operation:
+  PASS
+
+safetensors:
+  PASS
+
+Accelerate:
+  PASS
+
+
+M2.7 — vLLM / Gemma 4 31B
+--------------------------
+
+vLLM feasibility evidence:
+  PASS
+
+Native GPU-only residency:
+  resource-infeasible on tested 16 GiB GPU
+
+12 GiB CPU-offload inference:
+  PASS
+
+compressed-tensors:
+  PASS
+
+Marlin W4A16:
+  PASS
+
+Gemma 4 semantic chat:
+  PASS
+
+Coding inference:
+  PASS
+
+Deterministic repeatability:
+  PASS 3 / FAIL 0
+
+
+Runtime Separation
+------------------
+
+M2.6 primary project runtime:
+  torch 2.14.0+cu130
+  torchvision 0.29.0+cu130
+  triton 3.8.0
+
+M2.7 isolated vLLM runtime:
+  torch 2.13.0+cu130
+  torchvision 0.28.0+cu130
+  triton 3.7.1
+  vLLM 0.30.0
+
+Isolation preserved:
+  PASS
+
+
+FINAL RESULT
+------------
+
+M2 regression status:
+  PASS

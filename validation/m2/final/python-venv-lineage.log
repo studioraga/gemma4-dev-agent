@@ -1,0 +1,8 @@
+python_version = 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+raw_executable = /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv/bin/python
+resolved_executable = /usr/bin/python3.12
+prefix = /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv
+base_prefix = /usr
+expected_venv = /home/rmk/dev/pub/ai-sys1/gp/gemma4-dev-agent/.venv
+expected_system = /usr/bin/python3.12
+PROJECT_VENV_LINEAGE=PASS

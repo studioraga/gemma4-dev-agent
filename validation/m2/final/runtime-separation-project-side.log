@@ -1,0 +1,4 @@
+torch = 2.14.0+cu130
+triton = 3.8.0
+vllm_in_project_env = None
+M2_RUNTIME_SEPARATION_PROJECT=PASS

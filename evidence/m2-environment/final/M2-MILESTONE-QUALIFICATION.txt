@@ -1,0 +1,126 @@
+Gemma 4 Developer Agent
+M2 Reproducible Environment Qualification
+=========================================
+
+Scope
+-----
+
+M2 establishes a reproducible, evidence-backed local development and
+model-runtime environment for the Gemma 4 Developer Agent project.
+
+
+Qualified Components
+--------------------
+
+M2.4
+  PyTorch CUDA runtime on NVIDIA Blackwell sm_120
+
+M2.5
+  Triton native Blackwell execution with generated sm_120a target
+
+M2.6
+  Transformers / Gemma 4 metadata and processor runtime stack
+
+M2.7
+  Gemma 4 31B W4A16 feasibility through isolated vLLM runtime
+
+
+Primary Project Runtime
+-----------------------
+
+Python:
+  3.12.3
+
+NumPy:
+  2.5.3
+
+PyTorch:
+  2.14.0+cu130
+
+torchvision:
+  0.29.0+cu130
+
+Triton:
+  3.8.0
+
+Transformers:
+  5.17.0
+
+Accelerate:
+  1.15.0
+
+safetensors:
+  0.8.0
+
+
+Host GPU Foundation
+-------------------
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0
+
+Driver:
+  580.159.03
+
+Host CUDA toolkit:
+  13.3
+
+PyTorch CUDA runtime:
+  13.0
+
+
+vLLM Runtime Qualification
+--------------------------
+
+Runtime isolation:
+  REQUIRED
+
+vLLM:
+  0.30.0
+
+PyTorch:
+  2.13.0+cu130
+
+Triton:
+  3.7.1
+
+compressed-tensors:
+  0.17.0
+
+Gemma 4 31B W4A16:
+  QUALIFIED_WITH_CPU_OFFLOAD
+
+Native 16 GiB GPU-only model residency:
+  NOT FEASIBLE on tested hardware
+
+
+Security / Repository Hygiene
+-----------------------------
+
+Model weights tracked in Git:
+  NO
+
+Private model/HF credentials tracked:
+  NO
+
+Adapter .safetensors trackability:
+  YES
+
+Primary project / vLLM dependency isolation:
+  PASS
+
+
+Decision
+--------
+
+M2:
+  QUALIFIED
+
+The reproducible-environment milestone is accepted as the baseline
+for subsequent SWE-bench, agent, training, and research work.
+
+Future dependency upgrades must be separately qualified and must not
+silently replace the M2 baseline.
