@@ -1,0 +1,11 @@
+Gemma 4 Developer Agent
+M2.5 Triton / sm_120 Qualification
+========================================================
+python = 3.12.3
+torch = 2.14.0+cu130
+triton = 3.8.0
+device = NVIDIA GeForce RTX 5060 Ti
+capability = (12, 0)
+max_error = 0.0
+TRITON_VECTOR_ADD=PASS
+RESULT=PASS

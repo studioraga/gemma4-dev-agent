@@ -1,0 +1,3 @@
+.version 9.3
+.target sm_120a
+.address_size 64

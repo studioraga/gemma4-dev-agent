@@ -1,0 +1,69 @@
+Gemma 4 Developer Agent
+M2.5 Triton / Blackwell / sm_120 Qualification
+================================================
+
+Triton:
+  3.8.0
+
+PyTorch:
+  2.14.0+cu130
+
+PyTorch CUDA runtime:
+  13.0
+
+Host CUDA:
+  13.3
+
+NVIDIA driver:
+  580.159.03
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0 / sm_120
+
+
+QUALIFICATION RESULTS
+---------------------
+
+Triton import:
+  PASS
+
+Normal cold-cache compilation:
+  PASS
+
+Normal cold-cache execution:
+  PASS
+
+Vector-add correctness:
+  PASS
+
+Generated native cubin:
+  PASS
+
+Native cubin architecture:
+  sm_120
+
+CUDA_DISABLE_PTX_JIT=1 cold-cache compilation/execution:
+  PASS
+
+CUDA_DISABLE_PTX_JIT=1 warm-cache execution:
+  PASS
+
+
+DECISION
+--------
+
+Triton 3.8.0:
+  QUALIFIED
+
+Qualified for Node1 Blackwell sm_120 execution within the
+M2 reproducible environment.
+
+This qualification does not automatically qualify:
+  vLLM
+  FlashAttention
+  bitsandbytes
+  quantization kernels
+  Gemma-specific runtime kernels

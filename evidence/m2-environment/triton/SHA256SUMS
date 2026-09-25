@@ -1,0 +1,17 @@
+3a55a404499009eef876267a95cac4c43f6d603d68b8a1df5674f46567934387  evidence/m2-environment/triton/add-kernel-ptx-target.txt
+05aad9cc7f0a4ea89491716cddfa1b496de6f4c037b98cd02bad740bd27d2a98  evidence/m2-environment/triton/environment.log
+ef8275970a91948ff2c944b675addf7fa4ffcdcb0225b9c0a2bdad0448e4f6f8  evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt
+ce76a11c8e32935f2256067762d679eb6f3e02bbd69a39e1af31355f7dcbf82c  validation/m2/triton/triton-add-kernel-cuobjdump.log
+67c999ec00a8830d650f112b1bc1edcba8c6cc0018d5dd2aeda9f0a527985420  validation/m2/triton/triton-add-kernel-nvdisasm-head.log
+f8e56b64b00e3c9a00afda50d1afeb02f4fc82fa3f1b1b1b724490c433512933  validation/m2/triton/triton-add-kernel-ptx-header.log
+478663935a00eec753e104cfe7615ae23d524ce885ef9174a6af02212f844a46  validation/m2/triton/triton-add-kernel-resource.log
+c001db8489ab9870395b42515195f53dc657f67e4e135a8b1e32e4e1b90d7cbd  validation/m2/triton/triton-cold-cache-no-ptx-jit.log
+c001db8489ab9870395b42515195f53dc657f67e4e135a8b1e32e4e1b90d7cbd  validation/m2/triton/triton-cold-cache-normal.log
+5a293362caeccedacc4131864a310b8e0e3da438ae6165fc5343ada6f9c5daef  validation/m2/triton/triton-cold-no-ptx-artifacts.log
+ce76a11c8e32935f2256067762d679eb6f3e02bbd69a39e1af31355f7dcbf82c  validation/m2/triton/triton-cold-no-ptx-cuobjdump.log
+818a350d7bfde9ffd97d06555df5622ac58caefc394186928f66cf11fc1d6c62  validation/m2/triton/triton-cold-normal-artifacts.log
+ce76a11c8e32935f2256067762d679eb6f3e02bbd69a39e1af31355f7dcbf82c  validation/m2/triton/triton-cold-normal-cuobjdump.log
+6b47f0e1f8f5e2f4ee9c575daf2d6b74490947826ecc6b8795df15fbf138aee8  validation/m2/triton/triton-sm120-qualification.log
+c001db8489ab9870395b42515195f53dc657f67e4e135a8b1e32e4e1b90d7cbd  validation/m2/triton/triton-vector-add-no-ptx-jit.log
+c001db8489ab9870395b42515195f53dc657f67e4e135a8b1e32e4e1b90d7cbd  validation/m2/triton/triton-vector-add-normal.log
+c001db8489ab9870395b42515195f53dc657f67e4e135a8b1e32e4e1b90d7cbd  validation/m2/triton/triton-warm-cache-no-ptx-jit.log
