@@ -1,0 +1,46 @@
+Gemma 4 Developer Agent
+Triton Target Clarification
+===========================
+
+Device
+------
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+CUDA compute capability:
+  12.0
+
+PyTorch reported architecture support:
+  sm_120
+
+
+Triton-generated target
+-----------------------
+
+Observed PTX target:
+  sm_120a
+
+Observed native cubin:
+  add_kernel.sm_120a.cubin
+
+Observed nvdisasm target:
+  sm_120a
+
+
+Interpretation
+--------------
+
+The M2.5 qualification is a successful Triton 3.8.0 qualification
+on the Node1 compute-capability-12.0 GPU.
+
+The generated Triton kernel is specifically compiled as sm_120a.
+
+The project therefore records both:
+
+  device architecture family: sm_120
+  Triton generated target:    sm_120a
+
+No PTX JIT dependency was required for the validated vector-add path:
+cold-cache and warm-cache execution both passed with
+CUDA_DISABLE_PTX_JIT=1.

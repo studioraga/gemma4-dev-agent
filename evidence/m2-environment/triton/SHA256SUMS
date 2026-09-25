@@ -1,6 +1,7 @@
 3a55a404499009eef876267a95cac4c43f6d603d68b8a1df5674f46567934387  evidence/m2-environment/triton/add-kernel-ptx-target.txt
 05aad9cc7f0a4ea89491716cddfa1b496de6f4c037b98cd02bad740bd27d2a98  evidence/m2-environment/triton/environment.log
-ef8275970a91948ff2c944b675addf7fa4ffcdcb0225b9c0a2bdad0448e4f6f8  evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt
+074405913193e0ac167d89b14e5a29fbc587d33103df70344e48064f688b5877  evidence/m2-environment/triton/TRITON-SM120-QUALIFICATION.txt
+054c6637b2ec8a9912b435e2329a5c2b83eb79a0c3529fd299505a9fb12b3ffa  evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt
 ce76a11c8e32935f2256067762d679eb6f3e02bbd69a39e1af31355f7dcbf82c  validation/m2/triton/triton-add-kernel-cuobjdump.log
 67c999ec00a8830d650f112b1bc1edcba8c6cc0018d5dd2aeda9f0a527985420  validation/m2/triton/triton-add-kernel-nvdisasm-head.log
 f8e56b64b00e3c9a00afda50d1afeb02f4fc82fa3f1b1b1b724490c433512933  validation/m2/triton/triton-add-kernel-ptx-header.log

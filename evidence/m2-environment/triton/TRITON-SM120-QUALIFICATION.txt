@@ -1,6 +1,6 @@
 Gemma 4 Developer Agent
-M2.5 Triton / Blackwell / sm_120 Qualification
-================================================
+M2.5 Triton / Blackwell Qualification
+=====================================
 
 Triton:
   3.8.0
@@ -11,7 +11,7 @@ PyTorch:
 PyTorch CUDA runtime:
   13.0
 
-Host CUDA:
+Host CUDA toolkit:
   13.3
 
 NVIDIA driver:
@@ -20,8 +20,17 @@ NVIDIA driver:
 GPU:
   NVIDIA GeForce RTX 5060 Ti
 
-Compute capability:
-  12.0 / sm_120
+CUDA compute capability:
+  12.0
+
+PyTorch architecture support:
+  sm_120
+
+Triton generated PTX target:
+  sm_120a
+
+Triton generated native cubin:
+  sm_120a
 
 
 QUALIFICATION RESULTS
@@ -36,19 +45,30 @@ Normal cold-cache compilation:
 Normal cold-cache execution:
   PASS
 
-Vector-add correctness:
+Vector-add numerical correctness:
   PASS
+  max_error=0.0
 
 Generated native cubin:
   PASS
 
-Native cubin architecture:
-  sm_120
+Generated native cubin target:
+  sm_120a
 
-CUDA_DISABLE_PTX_JIT=1 cold-cache compilation/execution:
+CUDA_DISABLE_PTX_JIT=1 cold-cache compilation:
   PASS
 
+CUDA_DISABLE_PTX_JIT=1 cold-cache execution:
+  PASS
+
+CUDA_DISABLE_PTX_JIT=1 cold-cache native cubin:
+  PASS
+  target=sm_120a
+
 CUDA_DISABLE_PTX_JIT=1 warm-cache execution:
+  PASS
+
+Automated M2.5 qualification gate:
   PASS
 
 
@@ -58,12 +78,17 @@ DECISION
 Triton 3.8.0:
   QUALIFIED
 
-Qualified for Node1 Blackwell sm_120 execution within the
-M2 reproducible environment.
+Qualified on Node1 for the validated Blackwell compute-capability-12.0
+execution path.
 
-This qualification does not automatically qualify:
-  vLLM
-  FlashAttention
-  bitsandbytes
-  quantization kernels
-  Gemma-specific runtime kernels
+The tested Triton kernel generates native sm_120a code and executes
+successfully from an empty cache with CUDA_DISABLE_PTX_JIT=1.
+
+This qualification is limited to the tested Triton execution path and
+does not automatically qualify:
+
+- vLLM
+- FlashAttention
+- bitsandbytes
+- quantization kernels
+- Gemma-specific runtime kernels
