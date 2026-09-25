@@ -1,0 +1,25 @@
+=== DATE ===
+2026-09-25T10:26:13+05:30
+
+=== CGROUP FS ===
+cgroup2fs
+
+=== CGROUP MOUNT ===
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+
+=== OVERLAY ===
+nodev	overlay
+
+=== NAMESPACES ===
+lsns: Unsupported ioctl NS_GET_USERNS
+
+=== USERNS ===
+kernel.unprivileged_userns_clone = 1
+
+=== SECCOMP ===
+Seccomp:	0
+Seccomp_filters:	0
+
+=== APPARMOR ===
+Yes
+AA_ENABLED_RC=0

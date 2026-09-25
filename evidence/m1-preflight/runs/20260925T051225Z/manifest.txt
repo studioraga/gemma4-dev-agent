@@ -1,0 +1,13 @@
+run=20260925T051225Z
+node1_host=sr-kaaldev
+node1_arch=x86_64
+node1_gpu=NVIDIA GeForce RTX 5060 Ti
+node1_driver=580.159.03
+node1_compute_cap=12.0
+node1_cuda=Cuda compilation tools, release 13.3, V13.3.33
+node1_docker=29.5.1
+node2_host=shiva-vaisesika
+node2_arch=aarch64
+node2_cuda=Cuda compilation tools, release 12.6, V12.6.68
+node2_docker=29.2.1
+git_commit=UNCOMMITTED

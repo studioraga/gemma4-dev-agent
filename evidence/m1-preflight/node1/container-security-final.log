@@ -1,0 +1,17 @@
+=== CGROUP ===
+filesystem=cgroup2fs
+CGROUP_V2=PASS
+
+=== OVERLAY ===
+OVERLAY=PASS
+
+=== APPARMOR ===
+Yes
+APPARMOR=PASS
+
+=== DOCKER SECURITY OPTIONS ===
+["name=apparmor","name=seccomp,profile=builtin","name=cgroupns"]
+DOCKER_SECCOMP=PASS
+DOCKER_APPARMOR=PASS
+
+CONTAINER_SECURITY=PASS

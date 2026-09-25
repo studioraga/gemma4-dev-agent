@@ -1,0 +1,46 @@
+Node1 CUDA Compatibility Qualification
+======================================
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0 / sm_120
+
+Driver:
+  NVIDIA 580.159.03
+
+Toolkit:
+  CUDA 13.3 / nvcc 13.3.33
+
+Observed:
+  The original unqualified CUDA build produced sm_75 device code.
+  Device execution failed because newer PTX could not be JIT compiled
+  by the current driver/toolchain combination.
+
+Corrected:
+  Explicit compilation with -arch=sm_120 produced native sm_120
+  device code and execution passed.
+
+Validation:
+  CUDA_RESULT=42
+  CUDA_SMOKE=PASS
+
+Additional characterization:
+  Native sm_120 fatbin execution: PASS
+  CUDA_FORCE_PTX_JIT=1: unsupported-toolchain failure
+
+M1 decision:
+  Preserve existing R580 driver.
+  Preserve CUDA 13.3.
+  Require native sm_120 compatibility for GPU dependencies.
+
+M2/M4 dependency qualification must explicitly check:
+  PyTorch
+  Triton
+  vLLM
+  FlashAttention
+  bitsandbytes
+  custom CUDA extensions
+  quantization kernels
+  Gemma runtime kernels

@@ -1,0 +1,22 @@
+==================================================
+M1 FINAL CHECKSUM VERIFICATION
+==================================================
+date=2026-09-25T11:29:12+05:30
+head=85c693e2d719b8b735562e0860418c98e58d2a5e
+
+=== COMBINED G1 ===
+node1.log: OK
+node2.log: OK
+manifest.txt: OK
+
+=== CUDA COMPATIBILITY NOTE ===
+evidence/m1-preflight/node1/CUDA-COMPATIBILITY-NOTE.txt: OK
+
+=== NODE1 GPU ===
+evidence/m1-preflight/node1/gpu-baseline-final.log: OK
+evidence/m1-preflight/node1/cuda-runtime-sm120.log: OK
+evidence/m1-preflight/node1/cuda-compatibility-characterization.log: OK
+
+=== NODE2 GPU ===
+evidence/m1-preflight/node2/gpu-baseline-final.log: OK
+evidence/m1-preflight/node2/cuda-runtime.log: OK

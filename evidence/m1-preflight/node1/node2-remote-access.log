@@ -1,0 +1,8 @@
+REMOTE_HOST=shiva-vaisesika
+REMOTE_ARCH=aarch64
+REMOTE_USER=srrmk
+uid=1000(srrmk) gid=1000(srrmk) groups=1000(srrmk),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),104(render),116(i2c),120(lpadmin),135(gdm),136(sambashare),994(docker),996(weston-launch),999(gpio),1001(jtop)
+DockerClient=29.2.1 DockerServer=29.2.1
+DockerArch=aarch64 CPUs=6 Memory=7989977088
+Build cuda_12.6.r12.6/compiler.34714021_0
+REMOTE_AUTOMATION=PASS

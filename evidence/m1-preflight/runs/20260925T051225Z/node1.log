@@ -1,0 +1,51 @@
+==================================================
+ GEMMA 4 DEVELOPER AGENT
+ M1 NODE1 QUALIFICATION
+==================================================
+
+=== PLATFORM ===
+[PASS] architecture = x86_64
+[PASS] Ubuntu 24.04
+[PASS] RAM >= 32 GiB (46 GiB)
+[PASS] free disk >= 150 GiB (730 GiB)
+
+=== TOOLS ===
+[PASS] git
+[PASS] curl
+[PASS] wget
+[PASS] jq
+[PASS] zip
+[PASS] unzip
+[PASS] rsync
+[PASS] ssh
+[PASS] python3
+[PASS] gcc
+[PASS] g++
+[PASS] cmake
+[PASS] ninja
+[PASS] docker
+[PASS] Git LFS
+[PASS] Python venv
+
+=== GPU / CUDA ===
+[PASS] NVIDIA GPU: NVIDIA GeForce RTX 5060 Ti
+[PASS] GPU compute capability 12.0 / sm_120
+[PASS] CUDA 13.3 native sm_120 runtime
+[WARN] R580 + CUDA 13.3: native sm_120 qualified; CUDA 13.3 PTX JIT not assumed
+
+=== DOCKER ===
+[PASS] Docker daemon/user access
+[PASS] Docker architecture = x86_64
+[PASS] Docker amd64 execution
+[PASS] container security primitives
+[WARN] NVIDIA Container Toolkit deferred to M2/M4
+
+=== NODE2 ===
+[PASS] Node1 -> Node2 SSH
+[PASS] Node1 -> Node2 Docker
+[PASS] remote ARM64 container
+
+--------------------------------------------------
+PASS=30 WARN=2 FAIL=0
+--------------------------------------------------
+RESULT: NODE1 READY FOR M2

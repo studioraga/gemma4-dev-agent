@@ -1,0 +1,122 @@
+Gemma 4 Developer Agent
+M1 Infrastructure Baseline
+==========================
+
+NODE1
+-----
+
+Role:
+  Primary development, Gemma runtime, training/research,
+  SWE-bench and orchestration host.
+
+Architecture:
+  x86_64
+
+Operating system:
+  Ubuntu 24.04
+
+GPU:
+  NVIDIA GeForce RTX 5060 Ti
+  16 GiB class
+  compute capability 12.0
+  native target sm_120
+
+NVIDIA driver:
+  580.159.03
+
+CUDA toolkit:
+  13.3
+
+CUDA qualification:
+  native sm_120 execution PASS
+
+Known constraint:
+  CUDA 13.3 PTX JIT is not assumed on R580.
+  Native sm_120 code is qualified.
+
+Docker:
+  functional amd64 runtime
+
+Docker boot policy:
+  intentionally not automatically enabled for Node1 lab-idle policy
+
+NVIDIA Container Toolkit:
+  not installed during M1
+  deferred until runtime requirements are known
+
+
+NODE2
+-----
+
+Role:
+  heterogeneous ARM64 validation,
+  remote builds/tests,
+  cross-platform verification.
+
+Architecture:
+  aarch64
+
+Platform:
+  NVIDIA Jetson Orin
+
+Operating system:
+  Ubuntu 22.04 / Jetson Linux
+
+L4T:
+  R36.4.7
+
+JetPack:
+  6.2.1+b38
+
+CUDA:
+  12.6.68
+
+GPU architecture:
+  compute capability 8.7
+  native target sm_87
+
+CUDA qualification:
+  PASS
+
+Docker:
+  functional ARM64 runtime
+
+SSH:
+  enabled
+  validated
+  key-only Node1 orchestration qualified
+
+
+NETWORK
+-------
+
+Node1 DNS/HTTPS connectivity qualified for:
+
+  GitHub
+  Hugging Face
+  Kaggle
+  PyPI
+
+Large model assets were not downloaded during M1.
+
+
+SECURITY / CONTAINER PRIMITIVES
+-------------------------------
+
+cgroup v2:
+  PASS
+
+overlay filesystem:
+  PASS
+
+AppArmor:
+  enabled
+
+Docker seccomp:
+  available
+
+Passwordless orchestration:
+  dedicated project SSH key
+
+Private SSH keys:
+  remain outside project repository.

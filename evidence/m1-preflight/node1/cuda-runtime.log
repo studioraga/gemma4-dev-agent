@@ -1,0 +1,4 @@
+CUDA error at scripts/preflight/cuda/cuda_smoke.cu:55: the provided PTX was compiled with an unsupported toolchain.
+CUDA_DEVICE=NVIDIA GeForce RTX 5060 Ti
+CUDA_CC=12.0
+CUDA_GLOBAL_MEMORY_BYTES=16608919552
