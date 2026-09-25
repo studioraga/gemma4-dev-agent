@@ -1,0 +1,30 @@
+=== DATE ===
+2026-09-25T08:45:32+05:30
+=== HOST ===
+ Static hostname: shiva-vaisesika
+       Icon name: computer
+      Machine ID: 5dbfb12414a3456d9014d88183e338b1
+         Boot ID: f5ea16b5cf6d45aeaab4e917e8230556
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 5.15.148-tegra
+    Architecture: arm64
+ Hardware Vendor: NVIDIA
+  Hardware Model: NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
+=== L4T ===
+# R36 (release), REVISION: 4.7, GCID: 42132812, BOARD: generic, EABI: aarch64, DATE: Thu Sep 18 22:54:44 UTC 2025
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+=== JETPACK ===
+nvidia-jetpack	6.2.1+b38
+=== NVCC ===
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Wed_Aug_14_10:14:07_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.68
+Build cuda_12.6.r12.6/compiler.34714021_0
+=== CUDA LINK ===
+/usr/local/cuda-12.6
+=== TEGRA ===
+09-25-2026 08:45:33 RAM 874/7620MB (lfb 11x4MB) SWAP 0/36578MB (cached 0MB) CPU [0%@729,0%@729,0%@729,0%@729,0%@729,0%@729] GR3D_FREQ 0% cpu@49.5C soc2@48.125C soc0@49.218C gpu@49.531C tj@50.718C soc1@50.718C VDD_IN 4657mW/4657mW VDD_CPU_GPU_CV 516mW/516mW VDD_SOC 1512mW/1512mW
+09-25-2026 08:45:34 RAM 874/7620MB (lfb 11x4MB) SWAP 0/36578MB (cached 0MB) CPU [1%@729,0%@729,1%@1344,1%@1344,4%@1344,1%@1344] GR3D_FREQ 0% cpu@49.781C soc2@48.093C soc0@49.062C gpu@49.937C tj@50.656C soc1@50.656C VDD_IN 4776mW/4717mW VDD_CPU_GPU_CV 596mW/556mW VDD_SOC 1512mW/1512mW

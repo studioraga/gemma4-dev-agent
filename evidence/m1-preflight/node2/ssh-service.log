@@ -1,0 +1,18 @@
+=== DATE ===
+2026-09-25T10:16:52+05:30
+
+=== PACKAGE ===
+install ok installed 1:8.9p1-3ubuntu0.16
+
+=== SERVICE ===
+active
+enabled
+
+=== LISTEN ===
+LISTEN 0      128           0.0.0.0:22        0.0.0.0:*
+LISTEN 0      128              [::]:22           [::]:*
+
+=== PUBLIC HOST KEYS ===
+-rw-r--r-- 1 root root 173 Feb 27  2025 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw-r--r-- 1 root root  93 Feb 27  2025 /etc/ssh/ssh_host_ed25519_key.pub
+-rw-r--r-- 1 root root 565 Feb 27  2025 /etc/ssh/ssh_host_rsa_key.pub

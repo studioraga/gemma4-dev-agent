@@ -1,0 +1,46 @@
+==================================================
+ GEMMA 4 DEVELOPER AGENT
+ M1 NODE2 QUALIFICATION
+==================================================
+
+=== PLATFORM ===
+[PASS] architecture = aarch64
+[PASS] L4T R36.4.7
+[PASS] JetPack 6.2.1+b38
+
+=== TOOLS ===
+[PASS] git
+[PASS] jq
+[PASS] zip
+[PASS] unzip
+[PASS] rsync
+[PASS] ssh
+[PASS] python3
+[PASS] gcc
+[PASS] g++
+[PASS] cmake
+[PASS] ninja
+[PASS] docker
+[PASS] Git LFS
+
+=== SSH ===
+[PASS] SSH daemon active
+[PASS] SSH daemon enabled
+[PASS] SSH port 22 listening
+[PASS] SSH public host keys
+
+=== DOCKER ===
+[PASS] Docker daemon/user access
+[PASS] Docker architecture = aarch64
+[PASS] ARM64 container execution
+
+=== CUDA ===
+[PASS] CUDA 12.6 / sm_87 runtime
+
+=== TELEMETRY ===
+[PASS] tegrastats available
+
+--------------------------------------------------
+PASS=25 WARN=0 FAIL=0
+--------------------------------------------------
+RESULT: NODE2 READY
