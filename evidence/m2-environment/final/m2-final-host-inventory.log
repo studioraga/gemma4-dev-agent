@@ -1,8 +1,8 @@
 === DATE ===
-2026-09-25T22:12:21+05:30
+2026-09-26T09:54:07+05:30
 
 === COMMIT ===
-bf552a4fcc66798ef1f94e460e1df63461f3868c
+2f10a10ee5647351d22b8936ba32191f5020b8f7
 
 === OS ===
 PRETTY_NAME="Ubuntu 24.04.4 LTS"
@@ -37,7 +37,7 @@ Thread(s) per core:                      2
 Core(s) per socket:                      24
 Socket(s):                               1
 Stepping:                                1
-CPU(s) scaling MHz:                      21%
+CPU(s) scaling MHz:                      17%
 CPU max MHz:                             6000.0000
 CPU min MHz:                             800.0000
 BogoMIPS:                                6374.40
@@ -71,11 +71,11 @@ Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspa
 
 === RAM ===
                total        used        free      shared  buff/cache   available
-Mem:            46Gi       9.4Gi        20Gi       221Mi        17Gi        37Gi
-Swap:          8.0Gi       4.2Gi       3.8Gi
+Mem:            46Gi        12Gi       1.4Gi       671Mi        34Gi        34Gi
+Swap:          8.0Gi       3.8Gi       4.2Gi
 
 === NVIDIA ===
-Fri Sep 25 22:12:21 2026
+Sat Sep 26 09:54:07 2026
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |
 +-----------------------------------------+------------------------+----------------------+
@@ -84,7 +84,7 @@ Fri Sep 25 22:12:21 2026
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA GeForce RTX 5060 Ti     Off |   00000000:01:00.0  On |                  N/A |
-|  0%   44C    P5              8W /  180W |     542MiB /  16311MiB |      0%      Default |
+|  0%   46C    P8              8W /  180W |     709MiB /  16311MiB |      0%      Default |
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 
@@ -93,21 +93,21 @@ Fri Sep 25 22:12:21 2026
 |  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
 |        ID   ID                                                               Usage      |
 |=========================================================================================|
-|    0   N/A  N/A            2745      G   /usr/lib/xorg/Xorg                      352MiB |
+|    0   N/A  N/A            2745      G   /usr/lib/xorg/Xorg                      528MiB |
 |    0   N/A  N/A            2960      G   /usr/bin/gnome-shell                     24MiB |
-|    0   N/A  N/A            3460      G   ...exec/xdg-desktop-portal-gnome          2MiB |
+|    0   N/A  N/A            3460      G   ...exec/xdg-desktop-portal-gnome          3MiB |
 |    0   N/A  N/A            3732      G   ...bin/snapd-desktop-integration          6MiB |
-|    0   N/A  N/A            3793      G   ...rack-uuid=3190708988185955192        101MiB |
+|    0   N/A  N/A            3793      G   ...rack-uuid=3190708988185955192         92MiB |
 +-----------------------------------------------------------------------------------------+
 
-=== HOST CUDA 13.3 ===
+=== HOST CUDA ===
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2026 NVIDIA Corporation
 Built on Fri_Apr_24_07:22:02_PM_PDT_2026
 Cuda compilation tools, release 13.3, V13.3.33
 Build cuda_13.3.r13.3/compiler.37862127_0
 
-=== PROJECT CUDA RUNTIME ===
+=== PROJECT CUDA ===
 torch = 2.14.0+cu130
 torch CUDA = 13.0
 device = NVIDIA GeForce RTX 5060 Ti

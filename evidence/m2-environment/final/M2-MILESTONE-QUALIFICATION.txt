@@ -1,28 +1,27 @@
 Gemma 4 Developer Agent
-M2 Reproducible Environment Qualification
-=========================================
+M2 Reproducible Development & Model Runtime Qualification
+=========================================================
 
-Scope
------
+Decision
+--------
 
-M2 establishes a reproducible, evidence-backed local development and
-model-runtime environment for the Gemma 4 Developer Agent project.
+M2:
+  QUALIFIED
 
 
-Qualified Components
---------------------
+Qualified Scope
+---------------
 
-M2.4
-  PyTorch CUDA runtime on NVIDIA Blackwell sm_120
+M2 qualifies:
 
-M2.5
-  Triton native Blackwell execution with generated sm_120a target
-
-M2.6
-  Transformers / Gemma 4 metadata and processor runtime stack
-
-M2.7
-  Gemma 4 31B W4A16 feasibility through isolated vLLM runtime
+  system/project Python provenance
+  locked project dependencies
+  NVIDIA Blackwell PyTorch execution
+  Triton native Blackwell execution
+  Gemma 4 metadata/runtime libraries
+  exact Gemma 4 31B W4A16 local feasibility
+  isolated vLLM runtime
+  repository/runtime security hygiene
 
 
 Primary Project Runtime
@@ -53,30 +52,8 @@ safetensors:
   0.8.0
 
 
-Host GPU Foundation
--------------------
-
-GPU:
-  NVIDIA GeForce RTX 5060 Ti
-
-Compute capability:
-  12.0
-
-Driver:
-  580.159.03
-
-Host CUDA toolkit:
-  13.3
-
-PyTorch CUDA runtime:
-  13.0
-
-
-vLLM Runtime Qualification
---------------------------
-
-Runtime isolation:
-  REQUIRED
+Exact Model Feasibility Runtime
+-------------------------------
 
 vLLM:
   0.30.0
@@ -93,34 +70,53 @@ compressed-tensors:
 Gemma 4 31B W4A16:
   QUALIFIED_WITH_CPU_OFFLOAD
 
-Native 16 GiB GPU-only model residency:
-  NOT FEASIBLE on tested hardware
+
+Competition-Parity Boundary
+---------------------------
+
+M2 does not claim parity with the swegemma scoring host or
+repository-task sandbox.
+
+In particular M2 does not qualify:
+
+  4x L4 tensor-parallel serving
+  32768-token competition context
+  Python 3.13 repository sandbox
+  offline competition wheel installation
+  code graphs and embedding tools
+  two-container verification
+  declarative submission compilation
+  competition Resolution Rate
+
+These are explicitly deferred to M3/M4.
 
 
-Security / Repository Hygiene
------------------------------
+Repository Evolution
+--------------------
 
-Model weights tracked in Git:
-  NO
+M2 freezes the currently qualified baseline.
 
-Private model/HF credentials tracked:
-  NO
+From M3 onward new work follows:
 
-Adapter .safetensors trackability:
-  YES
+  docs/
+  competition/
+  data/
+  harness/
+  training/
+  evaluation/
+  scripts/
+  evidence/
+  validation/
 
-Primary project / vLLM dependency isolation:
-  PASS
+Existing qualified M1/M2 assets are not bulk-moved during M2.8.
 
 
-Decision
---------
+Final Acceptance
+----------------
 
-M2:
-  QUALIFIED
+M2 becomes the immutable reproducible development/runtime baseline
+for subsequent swegemma harness, agent, training, research, paper,
+and competition work.
 
-The reproducible-environment milestone is accepted as the baseline
-for subsequent SWE-bench, agent, training, and research work.
-
-Future dependency upgrades must be separately qualified and must not
-silently replace the M2 baseline.
+Any dependency replacement or environment migration must be
+requalified rather than silently altering this baseline.

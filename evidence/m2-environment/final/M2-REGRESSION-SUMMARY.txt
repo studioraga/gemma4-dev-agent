@@ -5,16 +5,16 @@ M2 Final Regression Summary
 M2.4 — PyTorch / Blackwell
 --------------------------
 
-PyTorch CUDA qualification:
+PyTorch CUDA:
   PASS
 
-Blackwell compute capability 12.0:
+Blackwell CC 12.0:
   PASS
 
-Native sm_120 support:
+Native sm_120:
   PASS
 
-CUDA_DISABLE_PTX_JIT regression:
+CUDA_DISABLE_PTX_JIT:
   PASS
 
 
@@ -27,17 +27,17 @@ Triton 3.8.0:
 Cold-cache execution:
   PASS
 
-Cold-cache CUDA_DISABLE_PTX_JIT execution:
+Cold-cache no-PTX-JIT execution:
   PASS
 
-Observed generated target:
+Generated target:
   sm_120a
 
 
-M2.6 — Model Runtime Metadata
+M2.6 — Gemma Runtime Metadata
 -----------------------------
 
-Transformers 5.17.0:
+Transformers:
   PASS
 
 Gemma4Config:
@@ -52,7 +52,7 @@ Tokenizer:
 Chat template:
   PASS
 
-torchvision CUDA operation:
+torchvision CUDA:
   PASS
 
 safetensors:
@@ -62,14 +62,17 @@ Accelerate:
   PASS
 
 
-M2.7 — vLLM / Gemma 4 31B
---------------------------
+M2.7 — Exact Gemma 4 31B W4A16
+------------------------------
 
-vLLM feasibility evidence:
+Exact checkpoint:
+  PASS
+
+vLLM isolated runtime:
   PASS
 
 Native GPU-only residency:
-  resource-infeasible on tested 16 GiB GPU
+  RESOURCE-INFEASIBLE
 
 12 GiB CPU-offload inference:
   PASS
@@ -80,36 +83,49 @@ compressed-tensors:
 Marlin W4A16:
   PASS
 
-Gemma 4 semantic chat:
+Semantic chat:
   PASS
 
 Coding inference:
   PASS
 
-Deterministic repeatability:
+Repeatability:
   PASS 3 / FAIL 0
 
 
 Runtime Separation
 ------------------
 
-M2.6 primary project runtime:
+Primary project runtime:
   torch 2.14.0+cu130
   torchvision 0.29.0+cu130
   triton 3.8.0
 
-M2.7 isolated vLLM runtime:
+Isolated vLLM runtime:
   torch 2.13.0+cu130
   torchvision 0.28.0+cu130
   triton 3.7.1
   vLLM 0.30.0
 
-Isolation preserved:
+Isolation:
   PASS
+
+
+Competition Parity
+------------------
+
+M2 competition-host parity:
+  NOT CLAIMED
+
+swegemma parity begins:
+  M3
+
+submission-contract parity begins:
+  M4
 
 
 FINAL RESULT
 ------------
 
-M2 regression status:
+M2 regression:
   PASS

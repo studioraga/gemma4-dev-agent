@@ -1,0 +1,77 @@
+Gemma 4 Developer Agent
+M2 Competition-Parity Boundary
+==============================
+
+Purpose
+-------
+
+M2 qualifies the local development and model-runtime foundation.
+
+M2 does NOT claim full parity with the swegemma competition
+evaluation infrastructure.
+
+
+Locally Qualified in M2
+-----------------------
+
+Node1 GPU:
+  NVIDIA GeForce RTX 5060 Ti
+
+Compute capability:
+  12.0
+
+Host CUDA toolkit:
+  13.3
+
+Primary PyTorch runtime:
+  2.14.0+cu130
+
+Primary Triton:
+  3.8.0
+
+Exact Gemma 4 model feasibility:
+  PASS with isolated vLLM runtime and CPU offload
+
+
+Competition Evaluation Environment
+----------------------------------
+
+The swegemma competition harness uses:
+
+  4 x NVIDIA L4 GPUs
+  24 GB per GPU
+  tensor_parallel_size = 4
+  gpu_memory_utilization = 0.80
+  max_model_len = 32768
+  Gemma 4 tool-call parser
+  Gemma 4 reasoning parser
+  thinking enabled
+  LoRA-enabled serving
+
+The task execution sandbox is a separate runtime plane and uses
+Python 3.13 with offline wheel installation.
+
+
+Not Qualified by M2
+-------------------
+
+M2 does not establish:
+
+  4 x L4 hardware parity
+  tensor-parallel performance parity
+  32768-token context performance
+  swegemma two-container lifecycle parity
+  Python 3.13 task-sandbox parity
+  graph/embedding tool parity
+  offline wheel parity
+  submission compiler parity
+  submission.zip validity
+  competition Resolution Rate
+
+
+Next Milestone Boundary
+-----------------------
+
+M3 begins exact swegemma dataset and harness parity qualification.
+
+M4 begins declarative submission-contract and sample-submission parity.

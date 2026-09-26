@@ -1,3 +1,5 @@
+evidence/m2-environment/final/M2-MILESTONE-QUALIFICATION.txt:19:  Triton native Blackwell execution with generated sm_120a target
+evidence/m2-environment/final/M2-REGRESSION-SUMMARY.txt:34:  sm_120a
 evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:22:  sm_120a
 evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:25:  add_kernel.sm_120a.cubin
 evidence/m2-environment/triton/TRITON-TARGET-CLARIFICATION.txt:28:  sm_120a

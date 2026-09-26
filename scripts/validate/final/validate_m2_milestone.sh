@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+ROOT="$(
+  git rev-parse --show-toplevel
+)"
+
+cd "$ROOT"
+
 grep -q \
   'SYSTEM_PYTHON_PROVENANCE=PASS' \
   evidence/m2-environment/final/python-interpreter-provenance-corrected.log
@@ -31,12 +37,8 @@ grep -q \
   validation/m2/final/m25-triton-regression.log
 
 grep -q \
-  'M25_SM120A_EVIDENCE=PASS' \
-  validation/m2/final/m25-sm120a-evidence.log \
-  2>/dev/null \
-  || grep -q \
-    'sm_120a' \
-    validation/m2/final/m25-sm120a-evidence.log
+  'sm_120a' \
+  validation/m2/final/m25-sm120a-evidence.log
 
 grep -q \
   'RESULT=PASS' \
@@ -66,5 +68,11 @@ grep -q \
   '^  QUALIFIED$' \
   evidence/m2-environment/final/M2-MILESTONE-QUALIFICATION.txt
 
-echo \
-  "M2_FINAL_ACCEPTANCE_GATE=PASS"
+grep -q \
+  'M3 begins exact swegemma dataset and harness parity qualification' \
+  evidence/m2-environment/final/M2-COMPETITION-PARITY-BOUNDARY.txt
+
+test -f \
+  docs/architecture/REPOSITORY-LAYOUT.md
+
+echo "M2_FINAL_ACCEPTANCE_GATE=PASS"

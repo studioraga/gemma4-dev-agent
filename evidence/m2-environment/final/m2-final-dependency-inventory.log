@@ -1,8 +1,8 @@
 === DATE ===
-2026-09-25T22:07:37+05:30
+2026-09-26T09:27:14+05:30
 
 === COMMIT ===
-bf552a4fcc66798ef1f94e460e1df63461f3868c
+2f10a10ee5647351d22b8936ba32191f5020b8f7
 
 === BRANCH ===
 m2-reproducible-environment
@@ -10,13 +10,13 @@ m2-reproducible-environment
 === UV ===
 uv 0.12.5 (x86_64-unknown-linux-gnu)
 
-=== PROJECT PYTHON ===
+=== PYTHON ===
 Python 3.12.3
 
-=== UV LOCK CHECK ===
-Resolved 59 packages in 9ms
+=== LOCK CHECK ===
+Resolved 59 packages in 2ms
 
-=== UV TREE ===
+=== DEPENDENCY TREE ===
 Resolved 59 packages in 2ms
 gemma4-dev-agent v0.1.0
 ├── accelerate v1.15.0
@@ -107,7 +107,7 @@ gemma4-dev-agent v0.1.0
         └── shellingham v1.5.4
 (*) Package tree already displayed
 
-=== PROJECT FREEZE ===
+=== FREEZE ===
 accelerate==1.15.0
 annotated-doc==0.0.5
 anyio==4.15.1

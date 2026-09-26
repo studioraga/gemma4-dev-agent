@@ -27,7 +27,7 @@ arch_list=['sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120']
 [PASS] matrix multiplication finite output
 
 === CUDA EVENT TIMING ===
-elapsed_10_matmuls_ms=3.676
+elapsed_10_matmuls_ms=3.677
 [PASS] CUDA event timing
 
 === MEMORY ===
